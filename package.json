@@ -2,6 +2,7 @@
   "name": "chatApp",
   "version": "1.0.0",
   "description": "a sample application to understand the working of socket.io along with node.js",
+  "main": "index.js",
   "dependencies": {
     "express": "^4.10.2",
     "nodemon": "^1.10.2",
