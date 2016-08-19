@@ -17,6 +17,7 @@ io.on('connection', function(socket){
 	//catching the messages sent by the client sockets
 	socket.on('chat message', function(msg){
 		console.log('Message is : ' + msg);
+		io.emit('chat message', msg);
 	});
 	//executed when the client socket is disconnected
 	socket.on('disconnect', function(){
