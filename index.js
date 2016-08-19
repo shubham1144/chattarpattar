@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 //Handler to give a html page in response
 app.get('/', function(request, response){
   console.log("Sending html response to client");
@@ -27,7 +27,7 @@ io.on('connection', function(socket){
 
 });
 
-http.listen(3000, function(){
-	console.log('Listening on port 3000');
+http.listen(PORT, function(){
+	console.log('Listening on port ');
 });
-console.log('Server is listening on port 3000');
+console.log('Server is listening on port ');
